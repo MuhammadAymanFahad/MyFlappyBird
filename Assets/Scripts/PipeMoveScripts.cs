@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PipeMoveScripts : MonoBehaviour
 {
+    [SerializeField] private float moveSpeed = 5;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,6 @@ public class PipeMoveScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
     }
 }
