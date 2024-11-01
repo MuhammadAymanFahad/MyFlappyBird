@@ -7,6 +7,7 @@ public class PipeSpawnScpripts : MonoBehaviour
     [SerializeField] private GameObject pipe;
     [SerializeField] private float spawnRate;
     private float timer = 0;
+    [SerializeField] private float heightOffset = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,8 @@ public class PipeSpawnScpripts : MonoBehaviour
 
     void spawnPipe()
     {
-        Instantiate(pipe, transform.position, transform.rotation);
+        float lowestHeight = transform.position.y - heightOffset;
+        float highestHeight = transform.position.y + heightOffset;
+        Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestHeight, highestHeight), 0), transform.rotation);
     }
 }
