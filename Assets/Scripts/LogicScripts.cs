@@ -8,9 +8,9 @@ public class LogicScripts : MonoBehaviour
     [SerializeField] private int playerScore;
     [SerializeField] private Text scoreText; 
     [ContextMenu("Increase Score")]
-    public void addScore()
+    public void addScore(int scoreToAdd)
     {
-        playerScore++;
+        playerScore += scoreToAdd;
         scoreText.text = playerScore.ToString();
     }
 }

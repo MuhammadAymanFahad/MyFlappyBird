@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PipeSpawnScpripts : MonoBehaviour
+public class PipeSpawnScripts : MonoBehaviour
 {
     [SerializeField] private GameObject pipe;
     [SerializeField] private float spawnRate;
