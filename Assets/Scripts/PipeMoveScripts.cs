@@ -5,6 +5,7 @@ using UnityEngine;
 public class PipeMoveScripts : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5;
+    private float destroyZone = -37;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class PipeMoveScripts : MonoBehaviour
 
     void checkPipePosition()
     {
-        if(transform.position.x < -35)
+        if(transform.position.x < destroyZone)
         {
             Destroy(this.gameObject);
         }
